@@ -64,6 +64,12 @@ public class ProductController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/asd")
+    public ResponseEntity<Void> asd(String channel){
+        _redisMessageSubscriber.subscribe(channel);
+        return ResponseEntity.noContent().build();
+    }
+
     @DeleteMapping
     public ResponseEntity<Void> DeleteCache(){
         return ResponseEntity.noContent().build();

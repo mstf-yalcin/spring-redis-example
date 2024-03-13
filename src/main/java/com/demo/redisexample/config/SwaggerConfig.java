@@ -20,7 +20,7 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
-                .info(getApiInfo("Jwt-Test"))
+                .info(getApiInfo("Redis-Test"))
                 .components(securityScheme());
     }
 

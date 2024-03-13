@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  spring-redis:
+    container_name: spring-redis-example
+    ports:
+      - 80:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+      - Redis-Host=redis-server
+      - Redis-Port=6379
+  redis-server:
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-volume:/opt/redis
+
